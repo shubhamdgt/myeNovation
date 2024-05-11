@@ -768,6 +768,168 @@ a,
             <div class="cursor_dot--violet"></div>
         </div>
     </div>
+
+    <script>
+        function openPDFsInNewTabs() {
+            // URL for the first PDF (myeNovation Kaizen Deck PDF)
+            const url1 = "https://myenovation.com/Updated_website/Assest/brochure/myeNovation_kaizen_Deck.pdf";
+        
+            // URL for the second PDF (Success Stories PDF)
+            const url2 = "https://myenovation.com/Updated_website/Assest/brochure/Success_Stories.pdf";
+        
+            // Open the first PDF in a new tab and keep a reference to the opened tab
+            const tab1 = window.open(url1, "_blank");
+            
+            // Add an event listener to detect when the first tab is closed
+            tab1.addEventListener('unload', function () {
+                // Use a short timeout to open the second PDF in a new tab after the first tab is closed
+                setTimeout(() => {
+                    window.open(url2, "_blank");
+                }, 500); // Delay opening the second tab by 500 milliseconds
+            });
+        }
+        
+        
+        </script>
+            <script>function redirectToCalendly() {
+                // Get the current date
+                const currentDate = new Date();
+                
+                // Format the date in the "YYYY-MM" format (e.g. "2024-05")
+                const year = currentDate.getFullYear();
+                const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // Months are zero-based in JavaScript
+            
+                const formattedDate = `${year}-${month}`;
+            
+                // Create the URL with the formatted date as a query parameter
+                const url = `https://calendly.com/myenovation/30min?month=${formattedDate}`;
+            
+                // Redirect to the URL
+                window.location.href = url;
+            }
+            
+            // Attach the function to the anchor element's click event
+            const liveDemoButton = document.querySelector('a.Google');
+            liveDemoButton.addEventListener('click', function(event) {
+                // Prevent the default action of the anchor element (navigation)
+                event.preventDefault();
+                
+                // Call the function to redirect to the URL
+                redirectToCalendly();
+            });
+            </script>
+    <style>.sticky-icon  {
+        z-index:1;
+        position:fixed;
+        top:15%;
+        right:0%;
+        width:220px;
+        display:flex;
+        flex-direction:column;}  
+    .sticky-icon a  {
+        transform:translate(160px,0px);
+        border-radius:50px 0px 0px 50px;
+        text-align:left;
+        margin:2px;
+        text-decoration:none;
+        text-transform:uppercase;
+        padding:10px;
+        font-size:22px;
+        font-family:'Oswald', sans-serif;
+        transition:all 0.8s;}
+    .sticky-icon a:hover  {
+        color:#FFF;
+        transform:translate(0px,0px);}	
+    .sticky-icon a:hover i  {
+        transform:rotate(360deg);}
+    /*.search_icon a:hover i  {
+        transform:rotate(360deg);}*/
+    .Facebook  {
+        background-color:#2C80D3;
+        color:#FFF;}
+        
+    .Youtube  {
+        background-color:#fa0910;
+        color:#FFF;}
+        
+    .Twitter  {
+        background-color:#53c5ff;
+        color:#FFF;}
+        
+    .Instagram  {
+        background-color:#FD1D1D;
+        color:#FFF;}
+        
+    .Google  {
+        background-color:#d34836;
+        color:#FFF;}						
+    .sticky-icon a i {
+        background-color:#FFF;
+        height:40px;
+        width:40px;
+        color:#000;
+        text-align:center;
+        line-height:40px;
+        border-radius:50%;
+        margin-right:20px;
+        transition:all 0.5s;}
+    .sticky-icon a i.fa-facebook-f  {
+        background-color:#FFF;
+        color:#2C80D3;}
+        
+    .sticky-icon a i.fa-google-plus-g  {
+        background-color:#FFF;
+        color:#d34836;}
+        
+    .sticky-icon a i.fa-instagram  {
+        background-color:#FFF;
+        color:#FD1D1D;}
+        
+    .sticky-icon a i.fa-youtube  {
+        background-color:#FFF;
+        color:#fa0910;}
+        
+    .sticky-icon a i.fa-twitter  {
+        background-color:#FFF;
+        color:#53c5ff;}
+    .fas fa-shopping-cart  {
+        background-color:#FFF;}	
+    #myBtn {
+        height:50px;
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      text-align:center;
+      padding:10px;
+      text-align:center;
+        line-height:40px;
+      border: none;
+      outline: none;
+      background-color: #1e88e5;
+      color: white;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .fa-arrow-circle-up  {
+        font-size:30px;}
+    
+    #myBtn:hover {
+      background-color: #555;
+    }	</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!--Start Sticky Icon--> 
+<div class="sticky-icon">
+ 
+   
+   <a class="Google" onclick="redirectToCalendly(); return false;"><i class="fas fa-calendar-alt"> </i>Live demo</a>
+
+   <a href="tel:+917720035299" class="Youtube"><i class="fas fa-phone"></i> Call Now </a>
+   <a href="https://www.linkedin.com/company/myenovation/?viewAsMember=true" class="Facebook"><i class="fab fa-linkedin"> </i> LinkedIn </a>
+   <a onclick="openPDFsInNewTabs();" class="Twitter"><i class="fas fa-download"> </i> Brochure  </a>   
+</div>
+
     <main id="main" class="main-wrapper no-padding">
         <section class="section_detail_hero is-insight-page">
             <div class="detail_hero_bottom-wrapper is-insight-page">
@@ -775,73 +937,13 @@ a,
                     <div class="padding-section-medium">
                         <div class="detail_hero_bottom_content-wrapper">
                             <div class="detail_hero_bottom_text-wrapper"><a data-w-id="730e466d-e071-fa33-b157-8cfff63b2465" href="blog.html" class="insights_backlink">&lt; All Blogs</a>
-                                <div class="w-dyn-list">
-                                    <div role="list" class="cases_slide_label-list w-dyn-items">
-                                        <div role="listitem" class="w-dyn-item">
-                                            <div data-w-id="8989e129-4954-afec-b7ca-f2764b2fb8e0" class="detail_hero_label">
-                                                <div>price</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                              
                                 <div class="padding-bottom padding-medium"></div>
                                 <h1 data-w-id="c05445c0-ae2b-e52e-1869-c089dd2d0689">Dealing with the rising inflation: Why businesses should revise their pricing strategy</h1>
                                 <div class="padding-bottom padding-large"></div>
                                 <p data-w-id="c05445c0-ae2b-e52e-1869-c089dd2d068c" class="text_intro--big text-color-white w-dyn-bind-empty"></p>
                             </div>
-                            <div class="detail_hero_bottom_details-wrapper">
-                                <div class="detail_hero_date-wrapper">
-                                    <div>11</div>
-                                    <div>Aug</div>
-                                    <div>2022</div>
-                                    <div>•</div>
-                                    <div class="is-read-time">min. read</div>
-                                </div>
-                                <div class="detail_article_social-share">
-                                    <div id="copy-text-2" class="url-copy-verify">👍🏻 Copied current URL!</div>
-                                    <a id="copy-link-2" aria-label="Copy the current link to this page." href="#" class="social-share-link is-copy outline--dark w-inline-block">
-                                        <div aria-hidden="true" class="icon-embed-xxsmall pointer-events-off w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 17 17" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M16.8197 4.86755V5.17478C16.8204 6.13811 16.4367 7.06191 15.7535 7.74098L13.2053 10.2982C12.7299 10.7691 11.9639 10.7691 11.4885 10.2982L11.3981 10.1988C11.2259 10.0232 11.2259 9.74195 11.3981 9.56629L14.5065 6.4579C14.8382 6.11391 15.0201 5.65257 15.0125 5.17478V4.86755C15.0128 4.38589 14.821 3.924 14.4794 3.58443L13.892 2.99708C13.5524 2.65548 13.0906 2.46357 12.6089 2.46395H12.3016C11.82 2.46357 11.3582 2.65548 11.0186 2.99708L7.91014 6.07839C7.73448 6.25059 7.45327 6.25059 7.27761 6.07839L7.17821 5.97899C6.70733 5.50357 6.70733 4.73756 7.17821 4.26213L9.73545 1.69588C10.419 1.02262 11.3423 0.64878 12.3016 0.656741H12.6089C13.5678 0.655982 14.4877 1.0363 15.1661 1.71396L15.7625 2.31034C16.4401 2.98876 16.8204 3.90865 16.8197 4.86755ZM5.66007 10.5422L10.4402 5.76213C10.525 5.6766 10.6405 5.62848 10.761 5.62848C10.8814 5.62848 10.9969 5.6766 11.0817 5.76213L11.7143 6.39465C11.7998 6.47948 11.8479 6.59497 11.8479 6.71544C11.8479 6.83591 11.7998 6.95138 11.7143 7.03625L6.93414 11.8163C6.84933 11.9019 6.73385 11.9499 6.61337 11.9499C6.49291 11.9499 6.37743 11.9019 6.2926 11.8163L5.66007 11.1838C5.57454 11.0989 5.52643 10.9834 5.52643 10.863C5.52643 10.7425 5.57454 10.627 5.66007 10.5422ZM10.0968 11.5C9.92114 11.3278 9.63994 11.3278 9.46427 11.5L6.36489 14.5814C6.02311 14.9252 5.55752 15.1172 5.07273 15.1144H4.7655C4.28384 15.1149 3.82195 14.9229 3.48238 14.5814L2.89503 13.994C2.55344 13.6544 2.36153 13.1925 2.36191 12.7109V12.4036C2.36153 11.9219 2.55344 11.4601 2.89503 11.1205L5.98537 8.01206C6.15757 7.8364 6.15757 7.55529 5.98537 7.37953L5.88597 7.28013C5.41055 6.8093 4.64455 6.8093 4.16912 7.28013L1.62095 9.83737C0.93775 10.5165 0.55393 11.4403 0.554689 12.4036V12.7199C0.556333 13.6757 0.936458 14.5919 1.61191 15.268L2.20829 15.8644C2.88671 16.5421 3.80661 16.9225 4.7655 16.9216H5.07273C6.02463 16.9273 6.94029 16.557 7.62089 15.8915L10.1962 13.3163C10.6671 12.8408 10.6671 12.0748 10.1962 11.5994L10.0968 11.5Z" fill="currentColor"/>
-</svg></div>
-                                    </a>
-                                    <a aria-label="Share on Linkedin" fs-socialshare-element="linkedin-2" href="#" class="social-share-link is-ld outline--dark w-inline-block">
-                                        <div aria-hidden="true" class="icon-embed-xxsmall pointer-events-off w-embed"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_309_1883)">
-<path d="M15.7648 0.711182H2.06166C1.22561 0.711182 0.548096 1.3887 0.548096 2.22475V15.9279C0.548096 16.7635 1.22561 17.4414 2.06166 17.4414H15.7648C16.6004 17.4414 17.2783 16.7639 17.2783 15.9279V2.22475C17.2783 1.38913 16.6008 0.711182 15.7652 0.711182H15.7648ZM5.72514 15.1566C5.72514 15.3997 5.52806 15.5972 5.28456 15.5972H3.40968C3.16662 15.5972 2.9691 15.4001 2.9691 15.1566V7.298C2.9691 7.05493 3.16618 6.85741 3.40968 6.85741H5.28456C5.52762 6.85741 5.72514 7.05449 5.72514 7.298V15.1566ZM4.34734 6.11684C3.3637 6.11684 2.56618 5.31932 2.56618 4.33568C2.56618 3.35204 3.3637 2.55453 4.34734 2.55453C5.33098 2.55453 6.12849 3.35204 6.12849 4.33568C6.12849 5.31932 5.33098 6.11684 4.34734 6.11684ZM15.5221 15.1921C15.5221 15.4159 15.3408 15.5972 15.117 15.5972H13.1055C12.8817 15.5972 12.7004 15.4159 12.7004 15.1921V11.5058C12.7004 10.9558 12.8616 9.09623 11.2635 9.09623C10.0236 9.09623 9.77226 10.3694 9.7219 10.9405V15.1921C9.7219 15.4159 9.54059 15.5972 9.31679 15.5972H7.37097C7.14717 15.5972 6.96586 15.4159 6.96586 15.1921V7.26252C6.96586 7.03873 7.14717 6.85741 7.37097 6.85741H9.31679C9.54059 6.85741 9.7219 7.03873 9.7219 7.26252V7.94792C10.1817 7.25814 10.865 6.72559 12.3194 6.72559C15.5405 6.72559 15.5221 9.7352 15.5221 11.3885V15.1921Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_309_1883">
-<rect width="16.7298" height="16.7298" fill="white" transform="translate(0.549072 0.711426)"/>
-</clipPath>
-</defs>
-</svg></div>
-                                    </a>
-                                    <a aria-label="Share on Facebook" fs-socialshare-element="facebook-2" href="#" class="social-share-link is-fb outline--dark w-inline-block">
-                                        <div aria-hidden="true" class="icon-embed-xxsmall pointer-events-off w-embed"><svg width="100%" height="100%" viewBox="0 0 11 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_309_1872)">
-<path d="M8.99229 3.48723H11.0005V0.148555C10.6542 0.103027 9.46233 0.000488281 8.07454 0.000488281C5.17911 0.000488281 3.19539 1.73914 3.19539 4.93467V7.87549H0.000488281V11.6083H3.19582V21.0005H7.11341V11.6091H10.1794L10.6662 7.87631H7.11255V5.30463C7.11341 4.22592 7.4176 3.48723 8.99229 3.48723Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_309_1872">
-<rect width="11" height="21" fill="white" transform="translate(0.000244141)"/>
-</clipPath>
-</defs>
-</svg></div>
-                                    </a>
-                                    <a aria-label="Share on twitter/X" fs-socialshare-element="twitter-2" href="#" class="social-share-link is-x outline--dark w-inline-block">
-                                        <div aria-hidden="true" class="icon-embed-xxsmall pointer-events-off w-embed"><svg width="100%" height="100%" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_309_1866)">
-<path d="M18.4599 3C17.4745 4.12172 16.4891 5.24024 15.5038 6.36195C14.4169 7.59552 13.3333 8.82909 12.2432 10.0563C12.1516 10.1617 12.1417 10.2288 12.2268 10.3471C14.4464 13.4917 16.6626 16.6428 18.8789 19.7906C18.9214 19.8481 18.9607 19.9088 19 19.9664C18.9607 20.0175 18.9116 19.9951 18.8691 19.9951C17.2781 19.9951 15.6838 19.9951 14.0928 19.9983C13.9815 19.9983 13.9226 19.96 13.8637 19.8737C12.3873 17.7709 10.9076 15.6712 9.42788 13.5716C9.3886 13.5173 9.34932 13.4662 9.30349 13.3991C8.87137 13.8912 8.44907 14.3674 8.02677 14.8435C6.54381 16.5245 5.06412 18.2055 3.58444 19.8897C3.51897 19.9632 3.45677 19.9983 3.35529 19.9951C2.91334 19.9887 2.4714 19.9951 2.01964 19.9951C2.03274 19.9216 2.08511 19.8833 2.1244 19.8417C4.24899 17.4289 6.37358 15.0193 8.50144 12.6129C8.61602 12.4851 8.61602 12.4084 8.51781 12.2709C6.37685 9.24454 4.24572 6.21175 2.1113 3.18216C2.07202 3.12464 2.03601 3.06072 2 3C3.6892 3 5.37839 3 7.06759 3C7.07741 3.01917 7.08723 3.04155 7.10033 3.05752C8.52763 5.08365 9.95494 7.11296 11.379 9.14228C11.4739 9.2797 11.5099 9.19022 11.5688 9.1231C13.3628 7.0842 15.1633 5.0421 16.9605 3C17.4581 3 17.959 3 18.4566 3H18.4599ZM4.02966 4.10254C4.08858 4.18563 4.12459 4.23996 4.16387 4.29109C5.04776 5.52466 5.92836 6.75503 6.81225 7.9886C9.39187 11.5902 11.9715 15.1919 14.5511 18.7935C14.6101 18.8766 14.6559 18.9469 14.7868 18.9437C15.4612 18.9373 16.1356 18.9405 16.8099 18.9373C16.8492 18.9373 16.9016 18.9597 16.9376 18.899C16.9016 18.8478 16.8656 18.7935 16.8263 18.7392C14.2794 15.1823 11.7325 11.6254 9.18563 8.07169C8.27229 6.79338 7.35567 5.51507 6.43905 4.23996C6.39322 4.17605 6.36049 4.09935 6.24918 4.09935C5.52571 4.10254 4.79896 4.09935 4.03293 4.09935L4.02966 4.10254Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_309_1866">
-<rect width="20.8537" height="19.7561" fill="white" transform="translate(0.0732422 0.0732422)"/>
-</clipPath>
-</defs>
-</svg></div>
-                                    </a>
-                                </div>
-                            </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -1124,40 +1226,64 @@ a,
             </div>
             </div>
         </section>
-        <section class="section_cta-subscribe">
-            <div class="padding-global">
-                <div class="padding-section-medium">
-                    <div class="container-large">
-                        <div id="static-content" class="cta_subscribe is-detail-page">
-                            <h2>Sign up for<br/><span class="h2-text-span">our newsletter</span></h2>
-                            <div>Join our newsletter to stay up to date on features and articles.</div>
-                            <div class="w-form">
-                                <form id="wf-form-Subscribe-form---Case-Detail" name="wf-form-Subscribe-form---Case-Detail" data-name="Subscribe form - Case Detail" method="get" class="footer_center_subscribe_form" data-wf-page-id="654de0ddf3a9e7e678b019eb"
-                                    data-wf-element-id="c05445c0-ae2b-e52e-1869-c089dd2d06de">
-                                    <div class="footer_center_subscribe_form-input-wrapper"><input class="form-input w-input" maxlength="256" name="Email---Subscribe" data-name="Email Subscribe" placeholder="Enter your email" type="email" id="Email---Subscribe" />
-                                        <div id="cs-form-trigger" aria-label="Click to submit form"
-                                            class="footer_center_subscribe_submit">
-                                            <div aria-hidden="true" class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z" fill="currentColor"/>
-</svg></div>
-                                        </div>
-                                    </div>
-                                    <div class="padding-bottom padding-small"></div>
-                                    <div class="max-width-small">
-                                        <div class="form_legal_text">By subscribing you agree to with our <a href="https://www.iubenda.com/privacy-policy/77406200" target="_blank" class="text-style-link">Privacy Policy </a>and provide consent to receive updates from our company.</div>
-                                    </div><input id="cs-form-submit" type="submit" data-wait="Please wait..." class="hide w-button" value="Submit" /></form>
-                                <div class="subscribe_success w-form-done">
-                                    <div>Thank you! Your submission has been received!</div>
+
+
+        <section class="section_cta">
+                <div class="padding-global">
+                    <div class="padding-section-medium">
+                        <div class="container-large">
+                            <div data-w-id="2c15d5a5-2628-7326-e649-0e8eec95fae0" class="cta_content-wrapper">
+                                <div class="max-width-medium">
+                                    <h2>Make better<br /><span class="h2-text-span">business decisions</span></h2>
                                 </div>
-                                <div class="w-form-fail">
-                                    <div>Oops! Something went wrong while submitting the form.</div>
+                                <div class="padding-bottom padding-large"></div>
+                                <div class="max-width-medium">
+                                    <p>
+                                        Explore our success stories to see how we've transformed a variety of businesses. Reach out to schedule an introductory call and discover more about our services.
+                                    </p>
+                                </div>
+                                <div class="padding-bottom padding-large"></div>
+                                <div class="button-wrapper align-center">
+                                    <a href="contact.html" class="button is-icon w-inline-block">
+                                        <div>Schedule a call with us</div>
+                                        <div aria-hidden="true" class="button_icon-wrapper hide-mobile-portrait">
+                                            <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z"
+                                                        fill="currentColor" />
+                                                </svg></div>
+                                            <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z"
+                                                        fill="currentColor" />
+                                                </svg></div>
+                                        </div>
+                                    </a>
+                                    <a href="products.html" class="button is-cta-outline w-inline-block">
+                                        <div>Explore our Products</div>
+                                        <div aria-hidden="true" class="button_icon-wrapper hide-mobile-portrait">
+                                            <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z"
+                                                        fill="currentColor" />
+                                                </svg></div>
+                                            <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%"
+                                                    viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z"
+                                                        fill="currentColor" />
+                                                </svg></div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
     </main>
     <section id="footer" class="section_footer">
         <div class="padding-global">
@@ -1165,97 +1291,92 @@ a,
                 <div class="footer_content-wrapper">
                     <div class="footer_top">
                         <div class="footer_top_logo-wrapper">
-                            <a href="/" class="footer_top_logo-link w-inline-block">
-                                <div class="spline-embed w-embed w-script">
-                                    <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.517/build/spline-viewer.js"></script>
-                                    <spline-viewer url="https://prod.spline.design/hLu06n4Xu5gDQwUx/scene.splinecode"></spline-viewer>
-                                </div><img src="https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/6540a4d39832b26f14143438_Logo-line-purple.svg" loading="lazy" alt="" class="footer_logo-line" /></a>
+                             
                         </div>
                         <div class="footer_top_navigation">
-                            <nav class="footer_top_navigation_column">
-                                <div class="footer_top_navigation_column_title">boobook</div><a href="/expertise" class="footer_top_navigation_link">expertise</a><a href="/why-boobook" class="footer_top_navigation_link">why boobook</a><a href="/case-studies" class="footer_top_navigation_link">case studies</a>
-                                <a
-                                    href="/about-us" class="footer_top_navigation_link">About us</a>
+                            <nav class="footer_top_navigation_column" >
+                                <div class="footer_top_navigation_column_title">myeNovation<sup>™</sup></div><a
+                                    href="products.html" class="footer_top_navigation_link">Products</a><a
+                                    href="why-myenovation.html" class="footer_top_navigation_link">Why myeNovation<sup>™</sup></a>
+                                    
+                                    <a href="case-studies.html" class="footer_top_navigation_link">Case Studies</a>
+                                    
+                                    <a href="contact.html" class="footer_top_navigation_link">Contact Us</a>
                             </nav>
                             <nav class="footer_top_navigation_column">
-                                <div class="footer_top_navigation_column_title">Service</div><a href="/jobs" class="footer_top_navigation_link">Jobs</a><a href="/boobook-culture" class="footer_top_navigation_link">Team &amp; culture</a><a href="/insights" class="footer_top_navigation_link">insights</a>
-                                <a
-                                    href="/resources" class="footer_top_navigation_link">resources</a>
+                                <div class="footer_top_navigation_column_title">Service</div><a href="jobs.html" class="footer_top_navigation_link">Jobs</a>
+                                    <a href="blog.html" class="footer_top_navigation_link">Blogs</a>
+                                  
+                                    <a href="culture.html"
+                                    class="footer_top_navigation_link">Team &amp; culture</a>
+                                  
                             </nav>
                             <div class="footer_top_navigation_column is-socials">
-                                <a aria-label="Go to Linkedin" href="https://www.linkedin.com/company/boobook-world/" target="_blank" class="footer_top_navigation_social-link is-ld w-inline-block">
-                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_309_1883)">
-<path d="M15.7648 0.711182H2.06166C1.22561 0.711182 0.548096 1.3887 0.548096 2.22475V15.9279C0.548096 16.7635 1.22561 17.4414 2.06166 17.4414H15.7648C16.6004 17.4414 17.2783 16.7639 17.2783 15.9279V2.22475C17.2783 1.38913 16.6008 0.711182 15.7652 0.711182H15.7648ZM5.72514 15.1566C5.72514 15.3997 5.52806 15.5972 5.28456 15.5972H3.40968C3.16662 15.5972 2.9691 15.4001 2.9691 15.1566V7.298C2.9691 7.05493 3.16618 6.85741 3.40968 6.85741H5.28456C5.52762 6.85741 5.72514 7.05449 5.72514 7.298V15.1566ZM4.34734 6.11684C3.3637 6.11684 2.56618 5.31932 2.56618 4.33568C2.56618 3.35204 3.3637 2.55453 4.34734 2.55453C5.33098 2.55453 6.12849 3.35204 6.12849 4.33568C6.12849 5.31932 5.33098 6.11684 4.34734 6.11684ZM15.5221 15.1921C15.5221 15.4159 15.3408 15.5972 15.117 15.5972H13.1055C12.8817 15.5972 12.7004 15.4159 12.7004 15.1921V11.5058C12.7004 10.9558 12.8616 9.09623 11.2635 9.09623C10.0236 9.09623 9.77226 10.3694 9.7219 10.9405V15.1921C9.7219 15.4159 9.54059 15.5972 9.31679 15.5972H7.37097C7.14717 15.5972 6.96586 15.4159 6.96586 15.1921V7.26252C6.96586 7.03873 7.14717 6.85741 7.37097 6.85741H9.31679C9.54059 6.85741 9.7219 7.03873 9.7219 7.26252V7.94792C10.1817 7.25814 10.865 6.72559 12.3194 6.72559C15.5405 6.72559 15.5221 9.7352 15.5221 11.3885V15.1921Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_309_1883">
-<rect width="16.7298" height="16.7298" fill="white" transform="translate(0.549072 0.711426)"/>
-</clipPath>
-</defs>
-</svg></div>
+                                <a aria-label="Go to Linkedin"
+                                    href="https://www.linkedin.com/company/myenovation/?viewAsMember=true" target="_blank"
+                                    class="footer_top_navigation_social-link is-ld w-inline-block">
+                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg width="100%"
+                                            height="100%" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_309_1883)">
+                                                <path
+                                                    d="M15.7648 0.711182H2.06166C1.22561 0.711182 0.548096 1.3887 0.548096 2.22475V15.9279C0.548096 16.7635 1.22561 17.4414 2.06166 17.4414H15.7648C16.6004 17.4414 17.2783 16.7639 17.2783 15.9279V2.22475C17.2783 1.38913 16.6008 0.711182 15.7652 0.711182H15.7648ZM5.72514 15.1566C5.72514 15.3997 5.52806 15.5972 5.28456 15.5972H3.40968C3.16662 15.5972 2.9691 15.4001 2.9691 15.1566V7.298C2.9691 7.05493 3.16618 6.85741 3.40968 6.85741H5.28456C5.52762 6.85741 5.72514 7.05449 5.72514 7.298V15.1566ZM4.34734 6.11684C3.3637 6.11684 2.56618 5.31932 2.56618 4.33568C2.56618 3.35204 3.3637 2.55453 4.34734 2.55453C5.33098 2.55453 6.12849 3.35204 6.12849 4.33568C6.12849 5.31932 5.33098 6.11684 4.34734 6.11684ZM15.5221 15.1921C15.5221 15.4159 15.3408 15.5972 15.117 15.5972H13.1055C12.8817 15.5972 12.7004 15.4159 12.7004 15.1921V11.5058C12.7004 10.9558 12.8616 9.09623 11.2635 9.09623C10.0236 9.09623 9.77226 10.3694 9.7219 10.9405V15.1921C9.7219 15.4159 9.54059 15.5972 9.31679 15.5972H7.37097C7.14717 15.5972 6.96586 15.4159 6.96586 15.1921V7.26252C6.96586 7.03873 7.14717 6.85741 7.37097 6.85741H9.31679C9.54059 6.85741 9.7219 7.03873 9.7219 7.26252V7.94792C10.1817 7.25814 10.865 6.72559 12.3194 6.72559C15.5405 6.72559 15.5221 9.7352 15.5221 11.3885V15.1921Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_309_1883">
+                                                    <rect width="16.7298" height="16.7298" fill="white"
+                                                        transform="translate(0.549072 0.711426)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg></div>
                                 </a>
-                                <a aria-label="Go to Instagram" href="https://www.instagram.com/boobook.world/" target="_blank" class="footer_top_navigation_social-link is-ig w-inline-block">
-                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg width="100%" height="100%" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_309_1877)">
-<path d="M11.1251 11.1221C12.2966 9.95078 12.2966 8.05166 11.1251 6.88032C9.9535 5.70897 8.054 5.70897 6.88243 6.88032C5.71086 8.05166 5.71086 9.95078 6.88243 11.1221C8.054 12.2935 9.9535 12.2935 11.1251 11.1221Z" fill="currentColor"/>
-<path d="M17.9537 5.29197C17.9114 4.33561 17.7568 3.67796 17.5351 3.10837C17.3065 2.50355 16.9549 1.96214 16.494 1.51197C16.0438 1.05475 15.4987 0.699678 14.9008 0.474589C14.3276 0.253024 13.6734 0.098386 12.7168 0.0561159C11.7532 0.0103234 11.4471 -0.000244141 9.00267 -0.000244141C6.55828 -0.000244141 6.25246 0.0103234 5.29239 0.0525934C4.33584 0.0948635 3.67807 0.249501 3.10836 0.471067C2.50343 0.699678 1.96192 1.05122 1.51165 1.51197C1.05434 1.96214 0.699204 2.50707 0.474072 3.10484C0.252463 3.67796 0.097795 4.33208 0.0555166 5.28844C0.00971509 6.25185 -0.000854492 6.55796 -0.000854492 9.00187C-0.000854492 11.4458 0.00971509 11.7515 0.0519934 12.7114C0.0942718 13.6678 0.24894 14.3254 0.470549 14.895C0.699204 15.4998 1.05434 16.0412 1.51165 16.4914C1.96192 16.9486 2.50696 17.3037 3.10484 17.5288C3.67807 17.7504 4.33232 17.905 5.28887 17.9473C6.24894 17.9895 6.55511 18.0001 8.99915 18.0001C11.4432 18.0001 11.7494 17.9895 12.7094 17.9473C13.666 17.905 14.3237 17.7504 14.8934 17.5288C16.1033 17.061 17.0599 16.1046 17.5277 14.895C17.7494 14.3219 17.904 13.6678 17.9463 12.7114C17.9886 11.7515 17.9991 11.4454 17.9991 9.00187C17.9991 6.55831 17.9956 6.2522 17.9533 5.29232L17.9537 5.29197ZM9.00302 13.6255C6.44976 13.6255 4.37812 11.5546 4.37812 9.00152C4.37812 6.44841 6.44976 4.37752 9.00302 4.37752C11.5563 4.37752 13.6279 6.44841 13.6279 9.00152C13.6279 11.5546 11.5566 13.6255 9.00302 13.6255ZM13.8108 5.27435C13.2146 5.27435 12.7309 4.79107 12.7309 4.19471C12.7309 3.59835 13.2143 3.11506 13.8108 3.11506C14.4072 3.11506 14.8906 3.59835 14.8906 4.19471C14.8906 4.79107 14.4072 5.27435 13.8108 5.27435Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_309_1877">
-<rect width="18" height="18" fill="white" transform="translate(0.000244141)"/>
-</clipPath>
-</defs>
-</svg></div>
+                                <a aria-label="Go to Instagram" href="#"
+                                    target="_blank" class="footer_top_navigation_social-link is-ig w-inline-block">
+                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg width="100%"
+                                            height="100%" viewBox="0 0 18 18" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_309_1877)">
+                                                <path
+                                                    d="M11.1251 11.1221C12.2966 9.95078 12.2966 8.05166 11.1251 6.88032C9.9535 5.70897 8.054 5.70897 6.88243 6.88032C5.71086 8.05166 5.71086 9.95078 6.88243 11.1221C8.054 12.2935 9.9535 12.2935 11.1251 11.1221Z"
+                                                    fill="currentColor" />
+                                                <path
+                                                    d="M17.9537 5.29197C17.9114 4.33561 17.7568 3.67796 17.5351 3.10837C17.3065 2.50355 16.9549 1.96214 16.494 1.51197C16.0438 1.05475 15.4987 0.699678 14.9008 0.474589C14.3276 0.253024 13.6734 0.098386 12.7168 0.0561159C11.7532 0.0103234 11.4471 -0.000244141 9.00267 -0.000244141C6.55828 -0.000244141 6.25246 0.0103234 5.29239 0.0525934C4.33584 0.0948635 3.67807 0.249501 3.10836 0.471067C2.50343 0.699678 1.96192 1.05122 1.51165 1.51197C1.05434 1.96214 0.699204 2.50707 0.474072 3.10484C0.252463 3.67796 0.097795 4.33208 0.0555166 5.28844C0.00971509 6.25185 -0.000854492 6.55796 -0.000854492 9.00187C-0.000854492 11.4458 0.00971509 11.7515 0.0519934 12.7114C0.0942718 13.6678 0.24894 14.3254 0.470549 14.895C0.699204 15.4998 1.05434 16.0412 1.51165 16.4914C1.96192 16.9486 2.50696 17.3037 3.10484 17.5288C3.67807 17.7504 4.33232 17.905 5.28887 17.9473C6.24894 17.9895 6.55511 18.0001 8.99915 18.0001C11.4432 18.0001 11.7494 17.9895 12.7094 17.9473C13.666 17.905 14.3237 17.7504 14.8934 17.5288C16.1033 17.061 17.0599 16.1046 17.5277 14.895C17.7494 14.3219 17.904 13.6678 17.9463 12.7114C17.9886 11.7515 17.9991 11.4454 17.9991 9.00187C17.9991 6.55831 17.9956 6.2522 17.9533 5.29232L17.9537 5.29197ZM9.00302 13.6255C6.44976 13.6255 4.37812 11.5546 4.37812 9.00152C4.37812 6.44841 6.44976 4.37752 9.00302 4.37752C11.5563 4.37752 13.6279 6.44841 13.6279 9.00152C13.6279 11.5546 11.5566 13.6255 9.00302 13.6255ZM13.8108 5.27435C13.2146 5.27435 12.7309 4.79107 12.7309 4.19471C12.7309 3.59835 13.2143 3.11506 13.8108 3.11506C14.4072 3.11506 14.8906 3.59835 14.8906 4.19471C14.8906 4.79107 14.4072 5.27435 13.8108 5.27435Z"
+                                                    fill="currentColor" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_309_1877">
+                                                    <rect width="18" height="18" fill="white"
+                                                        transform="translate(0.000244141)" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg></div>
                                 </a>
-                                <a aria-label="Go to youtube" href="https://www.youtube.com/channel/UC0l5Ndjgfe-1fa5GMW2g8rg" target="_blank" class="footer_top_navigation_social-link is-fb w-inline-block">
-                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 19 14" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-<path d="M0.316069 9.07736C0.299426 8.51875 0.272628 7.89366 0.264729 7.26828C0.255421 6.54042 0.255139 5.81197 0.26614 5.0841C0.271499 4.73541 0.303375 4.38643 0.339481 4.03948C0.41508 3.31219 0.435108 2.56836 0.716909 1.8852C1.05033 1.0772 1.64017 0.56476 2.50814 0.464885C3.22886 0.38214 3.95212 0.319718 4.67594 0.272974C5.35717 0.229133 6.0401 0.214617 6.72246 0.192551C7.45079 0.169325 8.17942 0.142324 8.90775 0.135936C9.64512 0.129549 10.3828 0.142904 11.1201 0.153937C11.5241 0.160034 11.9277 0.176583 12.3314 0.192261C12.9328 0.215488 13.5345 0.230875 14.135 0.270942C14.6687 0.306362 15.2022 0.35688 15.7328 0.42598C16.3519 0.506693 16.9274 0.693378 17.3702 1.19449C17.6805 1.54551 17.88 1.94936 17.9463 2.40867C18.0413 3.06773 18.1121 3.73143 18.1697 4.39514C18.2148 4.91542 18.2348 5.43889 18.2458 5.9612C18.2585 6.56974 18.2639 7.17915 18.2453 7.7874C18.2266 8.39072 18.1914 8.99461 18.1313 9.59502C18.0822 10.0863 18.021 10.5819 17.8992 11.0577C17.8193 11.369 17.6557 11.6741 17.469 11.936C17.1533 12.3782 16.7088 12.6563 16.183 12.7675C15.8789 12.832 15.5689 12.8772 15.2591 12.9013C14.612 12.9519 13.9638 12.9818 13.3159 13.0215C13.1559 13.0314 12.9965 13.0544 12.8369 13.0581C12.1517 13.0741 11.4662 13.0874 10.7811 13.0976C9.76416 13.1124 8.74697 13.1301 7.73006 13.1342C7.22005 13.1362 6.70948 13.1156 6.19947 13.0967C5.65477 13.0767 5.10951 13.0593 4.56593 13.0175C3.91658 12.9673 3.26638 12.9138 2.62182 12.8224C1.67966 12.6885 0.993632 12.1752 0.664159 11.2406C0.547377 10.9097 0.509295 10.5473 0.453725 10.196C0.398437 9.84761 0.366561 9.49544 0.316069 9.07707V9.07736ZM7.47929 3.86237V9.38946C9.03836 8.46504 10.583 7.54904 12.1401 6.62577C10.5811 5.70135 9.03836 4.7868 7.47929 3.86237Z" fill="currentColor"/>
-</svg></div>
+                                <a aria-label="Go to youtube"
+                                    href="#" target="_blank"
+                                    class="footer_top_navigation_social-link is-fb w-inline-block">
+                                    <div aria-hidden="true" class="icon-embed-xxsmall w-embed"><svg
+                                            xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+                                            viewBox="0 0 19 14" fill="none" preserveAspectRatio="xMidYMid meet"
+                                            aria-hidden="true" role="img">
+                                            <path
+                                                d="M0.316069 9.07736C0.299426 8.51875 0.272628 7.89366 0.264729 7.26828C0.255421 6.54042 0.255139 5.81197 0.26614 5.0841C0.271499 4.73541 0.303375 4.38643 0.339481 4.03948C0.41508 3.31219 0.435108 2.56836 0.716909 1.8852C1.05033 1.0772 1.64017 0.56476 2.50814 0.464885C3.22886 0.38214 3.95212 0.319718 4.67594 0.272974C5.35717 0.229133 6.0401 0.214617 6.72246 0.192551C7.45079 0.169325 8.17942 0.142324 8.90775 0.135936C9.64512 0.129549 10.3828 0.142904 11.1201 0.153937C11.5241 0.160034 11.9277 0.176583 12.3314 0.192261C12.9328 0.215488 13.5345 0.230875 14.135 0.270942C14.6687 0.306362 15.2022 0.35688 15.7328 0.42598C16.3519 0.506693 16.9274 0.693378 17.3702 1.19449C17.6805 1.54551 17.88 1.94936 17.9463 2.40867C18.0413 3.06773 18.1121 3.73143 18.1697 4.39514C18.2148 4.91542 18.2348 5.43889 18.2458 5.9612C18.2585 6.56974 18.2639 7.17915 18.2453 7.7874C18.2266 8.39072 18.1914 8.99461 18.1313 9.59502C18.0822 10.0863 18.021 10.5819 17.8992 11.0577C17.8193 11.369 17.6557 11.6741 17.469 11.936C17.1533 12.3782 16.7088 12.6563 16.183 12.7675C15.8789 12.832 15.5689 12.8772 15.2591 12.9013C14.612 12.9519 13.9638 12.9818 13.3159 13.0215C13.1559 13.0314 12.9965 13.0544 12.8369 13.0581C12.1517 13.0741 11.4662 13.0874 10.7811 13.0976C9.76416 13.1124 8.74697 13.1301 7.73006 13.1342C7.22005 13.1362 6.70948 13.1156 6.19947 13.0967C5.65477 13.0767 5.10951 13.0593 4.56593 13.0175C3.91658 12.9673 3.26638 12.9138 2.62182 12.8224C1.67966 12.6885 0.993632 12.1752 0.664159 11.2406C0.547377 10.9097 0.509295 10.5473 0.453725 10.196C0.398437 9.84761 0.366561 9.49544 0.316069 9.07707V9.07736ZM7.47929 3.86237V9.38946C9.03836 8.46504 10.583 7.54904 12.1401 6.62577C10.5811 5.70135 9.03836 4.7868 7.47929 3.86237Z"
+                                                fill="currentColor" />
+                                        </svg></div>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="padding-bottom padding-large"></div>
-                    <div class="footer_center">
-                        <div class="footer_center_subscribe">
-                            <div id="mc-embedded-subscribe-form" class="w-form">
-                                <form id="wf-form-Subscribe-form" name="wf-form-Subscribe-form" data-name="Subscribe form" action="https://world.us12.list-manage.com/subscribe/post?u=525417d031c8ddb6d5e6c982c&amp;amp;id=a9e3b2d641&amp;amp;f_id=006b6ee0f0"
-                                    method="post" class="footer_center_subscribe_form" data-wf-page-id="654de0ddf3a9e7e678b019eb" data-wf-element-id="2211ee36-ebbf-f0c3-4516-a23457d24e9d">
-                                    <div class="footer_center_subscribe_title">Sign up for our newsletter today and be in the know!</div>
-                                    <div class="padding-bottom padding-small"></div>
-                                    <div class="footer_center_subscribe_form-input-wrapper"><input class="form-input w-input" maxlength="256" name="Email---Footer" data-name="Email - Footer" placeholder="Enter your email" type="email" id="Email---Footer" tabindex="0" />
-                                        <div id="form-trigger" aria-label="Submit form"
-                                            tabindex="0" class="footer_center_subscribe_submit">
-                                            <div aria-hidden="true" class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.1766 4.9319H17.6516C17.6516 4.9319 18.6777 7.0884 21.1146 8.67822C23.5515 10.268 25.1066 10.4412 25.1066 10.4412V11.5903C25.1066 11.5903 23.1347 11.8106 20.7779 13.7153C18.4212 15.6199 17.6516 17.0681 17.6516 17.0681H16.1766C16.1766 17.0681 17.828 13.4162 19.5114 11.9995H0V10.1264H19.4953C19.4953 10.1264 17.0584 7.62358 16.1606 4.94764L16.1766 4.9319Z" fill="currentColor"/>
-</svg></div>
-                                        </div>
-                                    </div>
-                                    <div class="padding-bottom padding-small"></div>
-                                    <div class="max-width-small">
-                                        <div class="footer_center_subscribe_form_text">By subscribing you comply with our <a href="https://www.iubenda.com/privacy-policy/77406200" target="_blank" class="text-style-link">Privacy Policy</a> and provide consent to receive updates from our company.</div>
-                                    </div><input id="form-submit" type="submit" data-wait="Please wait..." class="hide w-button" value="Submit" /></form>
-                                <div class="subscribe_success w-form-done">
-                                    <div>Thank you! Your submission has been received!</div>
-                                </div>
-                                <div class="w-form-fail">
-                                    <div>Oops! Something went wrong while submitting the form.</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer_center_logo-wrapper"><a aria-label="Go to MRS website" href="https://www.mrs.org.uk/" target="_blank" class="footer_center_logo-link w-inline-block"><img src="https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/650303aee622cc7d0e0324ac_mrs-logo.svg" loading="lazy" alt="" class="footer_center_logo"/></a>
-                            <a
-                                aria-label="Go to Cube website" href="https://cubelgium.be/" target="_blank" class="footer_center_logo-link w-inline-block"><img src="https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/650303aef4cfe61cfec3056d_cube-logo.svg" loading="lazy" alt="" class="footer_center_logo" /></a><a aria-label="Go to Esomar website" href="https://esomar.org/"
-                                    target="_blank" class="footer_center_logo-link w-inline-block"><img src="https://assets-global.website-files.com/64fed7eecff9e45d4bb373ed/650303ae8f8a9496d4e22f33_esomar-logo.svg" loading="lazy" alt="" class="footer_center_logo"/></a></div>
-                    </div>
+                    
                 </div>
             </div>
         </div>
         <div class="footer_legal">
             <div class="footer_legal_content-wrapper">
+               
                 <div class="footer_legal-wrapper">
-                    <div class="footer_legal_link w-embed w-iframe w-script"><a href="https://www.iubenda.com/privacy-policy/77406200" target="" class="footer_legal_link iubenda-noiframe" title="Privacy Policy ">Privacy Policy</a>
+                    <div class="footer_legal_link w-embed w-iframe w-script"><a href="privacy-policy/policy.html" target="" class="footer_legal_link iubenda-noiframe" title="Privacy Policy ">Privacy Policy</a>
                         <script type="text/javascript">
                             (function(w, d) {
                                 var loader = function() {
@@ -1274,7 +1395,7 @@ a,
                             })(window, document);
                         </script>
                     </div>
-                    <div class="footer_legal_link w-embed w-iframe w-script"><a href="https://www.iubenda.com/privacy-policy/77406200/cookie-policy" class="footer_legal_link iubenda-noiframe" title="Cookie Policy ">Cookie Policy</a>
+                    <div class="footer_legal_link w-embed w-iframe w-script"><a href="privacy-policy/terms.html" class="footer_legal_link iubenda-noiframe" title="Cookie Policy ">Terms &amp; Conditions</a>
                         <script type="text/javascript">
                             (function(w, d) {
                                 var loader = function() {
@@ -1294,47 +1415,9 @@ a,
                         </script>
                     </div>
                 </div>
-                <div class="footer_legal-wrapper">
-                        <div class="footer_legal_link w-embed w-iframe w-script"><a href="privacy-policy/policy.html" target="" class="footer_legal_link iubenda-noiframe" title="Privacy Policy ">Privacy Policy</a>
-                            <script type="text/javascript">
-                                (function(w, d) {
-                                    var loader = function() {
-                                        var s = d.createElement("script"),
-                                            tag = d.getElementsByTagName("script")[0];
-                                        s.src = "https://cdn.iubenda.com/iubenda.js";
-                                        tag.parentNode.insertBefore(s, tag);
-                                    };
-                                    if (w.addEventListener) {
-                                        w.addEventListener("load", loader, false);
-                                    } else if (w.attachEvent) {
-                                        w.attachEvent("onload", loader);
-                                    } else {
-                                        w.onload = loader;
-                                    }
-                                })(window, document);
-                            </script>
-                        </div>
-                        <div class="footer_legal_link w-embed w-iframe w-script"><a href="privacy-policy/terms.html" class="footer_legal_link iubenda-noiframe" title="Cookie Policy ">Terms &amp; Conditions</a>
-                            <script type="text/javascript">
-                                (function(w, d) {
-                                    var loader = function() {
-                                        var s = d.createElement("script"),
-                                            tag = d.getElementsByTagName("script")[0];
-                                        s.src = "https://cdn.iubenda.com/iubenda.js";
-                                        tag.parentNode.insertBefore(s, tag);
-                                    };
-                                    if (w.addEventListener) {
-                                        w.addEventListener("load", loader, false);
-                                    } else if (w.attachEvent) {
-                                        w.attachEvent("onload", loader);
-                                    } else {
-                                        w.onload = loader;
-                                    }
-                                })(window, document);
-                            </script>
-                        </div>
-                    </div>
-                    <div class="footer_legal_text">©  <span id="copyright-year" class="copyright-year">2023</span> boobook. all rights reserved | by <a href="https://www.maneuver.be/" target="_blank" class="footer_legal_link">maneuver</a></div>
+                <div class="footer_legal_text">©  <span id="copyright-year" class="copyright-year">2024</span>
+                    myeNovation. all rights reserved | by <a href="#" target="_blank"
+                        class="footer_legal_link">GreenTin</a></div>
             </div>
         </div>
     </section>
