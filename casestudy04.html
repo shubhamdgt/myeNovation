@@ -494,12 +494,12 @@
                 /* Removes native scrollbar */
 
                 .no-scrollbar {
-                    -ms-overflow-style: none; // IE 10+
-                    overflow: -moz-scrollbars-none; // Firefox
+                    -ms-overflow-style: none; 
+                    overflow: -moz-scrollbars-none; 
                 }
 
                 .no-scrollbar::-webkit-scrollbar {
-                    display: none; // Safari and Chrome
+                    display: none; 
                 }
 
                 /* Adds inline flex display */
@@ -748,8 +748,8 @@
                             class="navbar_link is-service-link w-nav-link">Blogs</a><a href="culture.html"
                             class="navbar_link is-service-link w-nav-link">Team &amp; Culture</a>
                         
-                        <div class="navbar_menu-buttons hide-desktop"><a href="contact.html"
-                                class="button w-button">Contact Us</a></div>
+                        <div class="navbar_menu-buttons hide-desktop"><a href="https://www.myenovation.com/login.html"
+                                class="button w-button">Login</a></div>
                     </div>
                 </nav>
             <div class="navbar_menu-button w-nav-button">
@@ -929,30 +929,7 @@
             </div>
         </section>
     </main>
-    <input type="range" id="volumeControl" min="0" max="0.2" step="0.01" value="0.1">
-    <script>
-        // Get references to the audio element and the volume control slider
-        const audioPlayer = document.getElementById('audioPlayer');
-        const volumeControl = document.getElementById('volumeControl');
-
-        // Set initial volume to 10% (0.1)
-        audioPlayer.volume = 0.1;
-
-        // Event listener to update the volume when the slider value changes
-        volumeControl.addEventListener('input', function () {
-            // Ensure the volume does not exceed 20%
-            audioPlayer.volume = volumeControl.value;
-        });
-
-        // Add an event listener to play the audio when the page is loaded for the first time
-        window.addEventListener('load', function () {
-            audioPlayer.play();
-        });
-    </script>
-
-    <audio class="bgAudio" controls autoplay loop>
-        <source src="music/music32.m4a" />
-    </audio>
+   
     <section id="footer" class="section_footer">
         <div class="padding-global">
             <div class="container-large">
@@ -1071,7 +1048,7 @@
                                     
                                     <a href="case-studies.html" class="footer_top_navigation_link">Case Studies</a>
                                     
-                                    <a href="contact.html" class="footer_top_navigation_link">Contact Us</a>
+                                    <a href="https://www.myenovation.com/login.html" class="footer_top_navigation_link">Login</a>
                             </nav>
                             <nav class="footer_top_navigation_column">
                                 <div class="footer_top_navigation_column_title">Service</div><a href="career.html" class="footer_top_navigation_link">Career</a>
